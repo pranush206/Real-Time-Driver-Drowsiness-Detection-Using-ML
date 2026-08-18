@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveSafe AI - Real-Time Driver Drowsiness Detection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <span class="logo-icon">🛡️</span> DriveSafe AI
+        </div>
+
+        <div class="nav-status">
+            <span class="dot" id="systemDot"></span>
+            <span id="systemStatusText">System Ready</span>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section class="hero">
+
+            <h1>
+                Real-Time Driver
+                <span>Drowsiness Detection</span>
+            </h1>
+
+            <p>
+                AI-powered safety system monitoring driver alertness via real-time camera analysis.
+            </p>
+
+        </section>
+
+
+        <section class="dashboard">
+
+            <div class="camera-card">
+
+                <div class="card-header">
+                    <h2>Driver Monitoring</h2>
+
+                    <span id="cameraStatus">
+                        Camera Off
+                    </span>
+                </div>
+
+                <div class="video-container">
+
+                    <video id="video" autoplay playsinline muted></video>
+
+                    <div id="cameraOverlay">
+                        <div class="overlay-content">
+                            <span class="overlay-icon">📷</span>
+                            <p>Camera Off</p>
+                            <small>Click "Start Monitoring" below</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <canvas id="canvas"></canvas>
+
+                <div class="controls">
+
+                    <button id="startBtn">
+                        ▶ Start Monitoring
+                    </button>
+
+                    <button id="stopBtn" class="stop" disabled>
+                        ⏹ Stop
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <h2>Detection Status</h2>
+
+                <div id="statusIcon">
+                    👁️
+                </div>
+
+                <div id="status">
+                    WAITING
+                </div>
+
+                <div class="confidence-container">
+
+                    <p>
+                        Confidence Score
+                    </p>
+
+                    <div class="progress">
+                        <div id="confidenceBar"></div>
+                    </div>
+
+                    <span id="confidence">
+                        0%
+                    </span>
+
+                </div>
+
+                <div id="alertBox">
+                    System ready. Press Start Monitoring to begin.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        DriveSafe AI • ML-Based Real-Time Driver Drowsiness Detection System
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
